@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "476615700513",
+    "firebase_url": "https://slice-of-heaven-72e6a-default-rtdb.firebaseio.com",
+    "project_id": "slice-of-heaven-72e6a",
+    "storage_bucket": "slice-of-heaven-72e6a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:476615700513:android:783688143fc44c58e6b360",
+        "android_client_info": {
+          "package_name": "com.example.slice_of_heaven"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0yBPGfPQCZTQSF59lJuEnnFU8oIJWppM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

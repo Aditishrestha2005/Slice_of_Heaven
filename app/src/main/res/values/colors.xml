@@ -2,4 +2,12 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="marron">#400808</color>
+    <color name="mint">#60D1A3</color>
+    <color name="lavender">#9576AF</color>
+    <color name="pink">#BA4580</color>
+    <color name="voilet">#2F1A62</color>
+    <color name="light">#E0D7C5</color>
+
+
 </resources>
