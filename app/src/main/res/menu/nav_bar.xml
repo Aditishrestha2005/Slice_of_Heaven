@@ -2,18 +2,24 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/clientnavHome"
+        android:id="@+id/navHome"
         android:icon="@drawable/baseline_home_24"
         android:title="Home" />
 >
 
     <item
-        android:id="@+id/clientnavNotification"
-        android:icon="@drawable/baseline_notifications_24"
-        android:title="Notification" />
+        android:id="@+id/navSearch"
+        android:icon="@drawable/baseline_search_24"
+        android:title="Search" />
 
     <item
-        android:id="@+id/clientnavProfile"
+        android:id="@+id/navCart"
+        android:icon="@drawable/baseline_shopping_cart_24"
+        android:title="Cart" />
+
+
+    <item
+        android:id="@+id/navProfile"
         android:icon="@drawable/baseline_person_24"
         android:title="Profile" />
 </menu>

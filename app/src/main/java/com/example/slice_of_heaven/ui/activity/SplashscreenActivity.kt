@@ -10,7 +10,6 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.slice_of_heaven.MainActivity
 import com.example.slice_of_heaven.R
 import com.example.slice_of_heaven.databinding.ActivitySplashscreenBinding
 
