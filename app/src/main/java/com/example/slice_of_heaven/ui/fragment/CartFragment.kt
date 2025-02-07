@@ -29,7 +29,7 @@ class CartFragment : Fragment() {
         val cartfoodname = listOf("Cheese Pizza", "Veggie Pizza", "Meat Lover Pizza","Hawaiian Pizza")
         val cartfoodprice = listOf("Rs 650","Rs 550","Rs 850","Rs 750")
         val cartImage = listOf(
-            R.drawable.
+            R.drawable.c
 
         )
         return binidng.root
