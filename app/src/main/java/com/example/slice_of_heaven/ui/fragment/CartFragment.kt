@@ -5,7 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.slice_of_heaven.R
+import com.example.slice_of_heaven.adapter.CartAdapter
 import com.example.slice_of_heaven.databinding.FragmentCartBinding
 
 class CartFragment : Fragment() {
@@ -26,13 +28,23 @@ class CartFragment : Fragment() {
 
 
 
-        val cartfoodname = listOf("Cheese Pizza", "Veggie Pizza", "Meat Lover Pizza","Hawaiian Pizza")
-        val cartfoodprice = listOf("Rs 650","Rs 550","Rs 850","Rs 750")
+        val cartfoodname = listOf("Cheese Pizza", "Veggie Pizza", "Meat Lover Pizza","Hawaiian Pizza"," BBQ Chicken Pizza","Tandoori Pizza",)
+        val cartfoodprice = listOf("Rs 650","Rs 550","Rs 850","Rs 750","Rs 950","Rs 850")
         val cartImage = listOf(
-            R.drawable.c
+            R.drawable.cheese,
+            R.drawable.veggie,
+            R.drawable.meatlover,
+            R.drawable.hawaiian,
+            R.drawable.bbqchicken,
+            R.drawable.tandoori,
 
         )
+
+        val adapter= CartAdapter(ArrayList(cartfoodname),ArrayList(cartfoodprice),ArrayList(cartImage))
+        binidng.cartRecyclerView.layoutManager=LinearLayoutManager(requireContext())
+        binidng.cartRecyclerView.adapter=adapter
         return binidng.root
+
     }
 
     companion object {
