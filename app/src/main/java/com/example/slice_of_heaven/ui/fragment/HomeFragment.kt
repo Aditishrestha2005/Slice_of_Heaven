@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.slice_of_heaven.MenuBottomSheetFragment
 import com.example.slice_of_heaven.R
 import com.example.slice_of_heaven.adapter.PopularAdapter
 import com.example.slice_of_heaven.databinding.FragmentClientHomeBinding
@@ -25,6 +26,11 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentClientHomeBinding.inflate(inflater, container, false)
+
+        binding.ViewallMenu.setOnClickListener{
+            val bottomSheetDialog = MenuBottomSheetFragment()
+            bottomSheetDialog.show(parentFragmentManager,"Test")
+        }
         return binding.root
     }
         override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

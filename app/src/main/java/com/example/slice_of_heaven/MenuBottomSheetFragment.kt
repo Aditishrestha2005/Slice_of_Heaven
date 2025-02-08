@@ -9,20 +9,20 @@ import com.example.slice_of_heaven.databinding.FragmentMenuBottomSheetBinding
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 
-class MenuBottomSheetFragment : BottomSheetDialogFragment (){
-   private lateinit var binding: FragmentMenuBottomSheetBinding
+class MenuBottomSheetFragment : BottomSheetDialogFragment () {
+    private lateinit var binding: FragmentMenuBottomSheetBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        }
+    }
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding= FragmentMenuBottomSheetBinding.inflate(inflater,container,false)
+        binding = FragmentMenuBottomSheetBinding.inflate(inflater, container, false)
 
 
         return binding.root
@@ -30,6 +30,6 @@ class MenuBottomSheetFragment : BottomSheetDialogFragment (){
 
     companion object {
 
-        fun newInstance(param1: String, param2: String) =
 
     }
+}
