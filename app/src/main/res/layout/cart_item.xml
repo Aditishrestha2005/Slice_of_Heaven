@@ -42,6 +42,8 @@
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="31dp"
                 android:text="TextView"
+                android:textSize="16dp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/cartImage"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -53,6 +55,8 @@
                 android:layout_marginTop="43dp"
                 android:layout_marginBottom="16dp"
                 android:text="TextView"
+                android:textSize="16dp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/cartImage"
                 app:layout_constraintTop_toBottomOf="@+id/cartfoodname" />
@@ -61,13 +65,14 @@
                 android:id="@+id/minusBtn"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:layout_marginStart="117dp"
+                android:layout_marginStart="80dp"
                 android:layout_marginEnd="12dp"
                 android:background="@drawable/minus"
                 app:layout_constraintBottom_toBottomOf="@+id/cartitemquantity"
                 app:layout_constraintEnd_toStartOf="@+id/cartitemquantity"
                 app:layout_constraintStart_toEndOf="@+id/cartfoodname"
-                app:layout_constraintTop_toTopOf="@+id/cartitemquantity" />
+                app:layout_constraintTop_toTopOf="@+id/cartitemquantity"
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
                 android:id="@+id/cartitemquantity"

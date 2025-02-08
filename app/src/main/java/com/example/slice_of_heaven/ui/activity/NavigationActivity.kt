@@ -32,10 +32,10 @@ class NavigationActivity : AppCompatActivity() {
 
         binding.btnNav.setOnItemSelectedListener {
             when (it.itemId) {
-                R.id.navHome-> replaceFragment(HomeFragment())
-                R.id.navSearch ->replaceFragment(SearchFragment())
-                R.id.navCart ->replaceFragment(CartFragment())
-                R.id.navProfile ->replaceFragment(ProfileFragment())
+                R.id.homeFragment-> replaceFragment(HomeFragment())
+                R.id.searchFragment->replaceFragment(SearchFragment())
+                R.id.cartFragment ->replaceFragment(CartFragment())
+                R.id.profileFragment ->replaceFragment(ProfileFragment())
                 else -> {}
             }
 
