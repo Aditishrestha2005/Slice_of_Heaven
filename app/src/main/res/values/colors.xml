@@ -8,6 +8,8 @@
     <color name="pink">#BA4580</color>
     <color name="voilet">#2F1A62</color>
     <color name="light">#E0D7C5</color>
+    <color name="startcolor">#F8C45C</color>
+    <color name="endcolor">#F2D08D</color>
 
 
 </resources>
