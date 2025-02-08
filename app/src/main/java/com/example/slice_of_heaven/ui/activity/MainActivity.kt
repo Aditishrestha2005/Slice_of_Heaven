@@ -16,9 +16,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        val NavController:NavController=findNavController(R.id.fragmentContainerView12)
-        var bottomnav:BottomNavigationView =findViewById< BottomNavigationView>(R.id.bottomNavigationView)
-        bottomnav.setupWithNavController(NavController)
 
     }
 }
