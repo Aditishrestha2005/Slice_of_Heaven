@@ -21,6 +21,9 @@ class MenuBottomSheetFragment : BottomSheetDialogFragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentMenuBottomSheetBinding.inflate(inflater, container, false)
+        binding.backBtn.setOnClickListener {
+            dismiss()
+        }
         val menuitemName = listOf("Cheese Pizza", "Veggie Pizza", "Meat Lover Pizza", "Margherita Pizza", "BBQ Chicken Pizza", "Hawaiian Pizza", "Tandoori Pizza", "Paneer Pizza", "Bacon Pizza", "Pepperoni Pizza")
         val menufoodprice = listOf("Rs 650", "Rs 750", "Rs 1050", "Rs 750", "Rs 950", "Rs 750", "Rs 850", "Rs 850", "Rs 950", "Rs 950")
         val menuImage = listOf(
