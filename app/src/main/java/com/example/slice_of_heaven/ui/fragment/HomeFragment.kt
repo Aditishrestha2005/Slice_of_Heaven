@@ -39,7 +39,7 @@ class HomeFragment : Fragment() {
 
 
         val foodName = listOf("Meat Lover Pizza", "Hawaiian Pizza", " BBQ Chicken Pizza", "Tandoori Pizza")
-        val foodPrice = listOf("Rs 850", "Rs 750", "Rs 950", "Rs 850")
+        val foodPrice = listOf("Rs 1050", "Rs 750", "Rs 750", "Rs 850")
         val popularFoodImage = listOf(
             R.drawable.meatlover,
             R.drawable.hawaiian,
