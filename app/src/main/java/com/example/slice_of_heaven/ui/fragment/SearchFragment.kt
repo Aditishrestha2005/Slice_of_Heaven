@@ -28,10 +28,7 @@ class SearchFragment : Fragment() {
         R.drawable.bacon,
         R.drawable.pepperoni,
     )
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
 
-    }
 
     private val filteredmenuitemName = mutableListOf<String>()
     private val filteredmenufoodprice = mutableListOf<String>()
@@ -103,7 +100,5 @@ class SearchFragment : Fragment() {
         adapter.notifyDataSetChanged()
     }
 
-    companion object {
 
-    }
 }

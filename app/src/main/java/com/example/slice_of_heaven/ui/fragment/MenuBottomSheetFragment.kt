@@ -1,10 +1,11 @@
-package com.example.slice_of_heaven
+package com.example.slice_of_heaven.ui.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.slice_of_heaven.R
 import com.example.slice_of_heaven.adapter.MenuAdapter
 import com.example.slice_of_heaven.databinding.FragmentMenuBottomSheetBinding
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment

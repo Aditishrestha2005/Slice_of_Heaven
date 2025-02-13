@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.slice_of_heaven.MenuBottomSheetFragment
 import com.example.slice_of_heaven.R
 import com.example.slice_of_heaven.adapter.PopularAdapter
 import com.example.slice_of_heaven.databinding.FragmentClientHomeBinding
@@ -46,6 +45,8 @@ class HomeFragment : Fragment() {
             R.drawable.bbqchicken,
             R.drawable.tandoori
         )
+
+
 
         val adapter = PopularAdapter(foodName, foodPrice, popularFoodImage)
         binding.PopularReacylerView.layoutManager=LinearLayoutManager(requireContext())
