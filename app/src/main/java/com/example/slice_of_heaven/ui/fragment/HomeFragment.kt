@@ -10,10 +10,8 @@ import com.example.slice_of_heaven.R
 import com.example.slice_of_heaven.adapter.PopularAdapter
 import com.example.slice_of_heaven.databinding.FragmentClientHomeBinding
 
-
 class HomeFragment : Fragment() {
     private lateinit var binding:FragmentClientHomeBinding
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,13 +27,13 @@ class HomeFragment : Fragment() {
         binding.ViewallMenu.setOnClickListener{
             val bottomSheetDialog = MenuBottomSheetFragment()
             bottomSheetDialog.show(parentFragmentManager,"Test")
+
+
         }
         return binding.root
     }
-        override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-            super.onViewCreated(view, savedInstanceState)
-
-
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         val foodName = listOf("Meat Lover Pizza", "Hawaiian Pizza", " BBQ Chicken Pizza", "Tandoori Pizza")
         val foodPrice = listOf("Rs 1050", "Rs 750", "Rs 750", "Rs 850")

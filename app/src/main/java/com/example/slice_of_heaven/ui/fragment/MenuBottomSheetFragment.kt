@@ -13,14 +13,10 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 class MenuBottomSheetFragment : BottomSheetDialogFragment() {
     private lateinit var binding: FragmentMenuBottomSheetBinding
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View  {
         binding = FragmentMenuBottomSheetBinding.inflate(inflater, container, false)
         binding.backBtn.setOnClickListener {
             dismiss()
