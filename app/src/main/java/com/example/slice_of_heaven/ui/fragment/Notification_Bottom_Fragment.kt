@@ -23,7 +23,8 @@ class Notification_Bottom_Fragment : BottomSheetDialogFragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding=FragmentNotificationBottomBinding.inflate(layoutInflater,container,false)
-
+        val notification = listOf("Your order has been cancelled successfully","Order has been taken by the rider,","Your order has been placed")
+//        val notificationImage= listOf()
         return binding.root
     }
 
