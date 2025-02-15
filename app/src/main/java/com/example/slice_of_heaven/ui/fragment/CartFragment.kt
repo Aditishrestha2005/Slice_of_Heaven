@@ -1,5 +1,6 @@
 package com.example.slice_of_heaven.ui.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.slice_of_heaven.R
 import com.example.slice_of_heaven.adapter.CartAdapter
 import com.example.slice_of_heaven.databinding.FragmentCartBinding
+import com.example.slice_of_heaven.ui.activity.PayOutActivity
 
 class CartFragment : Fragment() {
     private lateinit var binidng:FragmentCartBinding
@@ -43,6 +45,15 @@ class CartFragment : Fragment() {
         val adapter= CartAdapter(ArrayList(cartfoodname),ArrayList(cartfoodprice),ArrayList(cartImage))
         binidng.cartRecyclerView.layoutManager=LinearLayoutManager(requireContext())
         binidng.cartRecyclerView.adapter=adapter
+        binidng.proceedBtn.setOnClickListener{
+            val intent=Intent(requireContext(),PayOutActivity::class.java)
+            startActivity(intent)
+        }
+
+
+
+
+
         return binidng.root
 
     }
