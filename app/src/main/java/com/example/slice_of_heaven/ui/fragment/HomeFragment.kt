@@ -46,7 +46,7 @@ class HomeFragment : Fragment() {
 
 
 
-        val adapter = PopularAdapter(foodName, foodPrice, popularFoodImage)
+        val adapter = PopularAdapter(foodName, foodPrice, popularFoodImage,requireContext())
         binding.PopularReacylerView.layoutManager=LinearLayoutManager(requireContext())
         binding.PopularReacylerView.adapter=adapter
 
