@@ -9,4 +9,5 @@ interface UserRepository {
     fun addUserToDatabase(userId:String,userModel: UserModel,callback: (Boolean, String) -> Unit)
     fun forgetPassword (username:String,callback: (Boolean, String) -> Unit)
     fun getCurretntUser(): FirebaseUser?
+
 }
