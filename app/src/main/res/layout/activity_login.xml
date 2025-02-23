@@ -52,7 +52,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/editpassword"
+        android:id="@id/textInputLayout5"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
@@ -61,11 +61,11 @@
         app:layout_constraintTop_toBottomOf="@+id/password">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editpassword"
             android:layout_width="269dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:background="@drawable/box"
-             />
+            android:background="@drawable/box" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
@@ -85,13 +85,13 @@
         android:id="@+id/btnlogin"
         android:layout_width="98dp"
         android:layout_height="55dp"
-        android:layout_marginStart="156dp"
+        android:layout_marginStart="164dp"
         android:layout_marginTop="35dp"
         android:backgroundTint="@color/marron"
         android:text="Login"
         android:textColor="@color/light"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editpassword" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout5" />
 
     <TextView
         android:id="@+id/Dacc"
@@ -131,5 +131,5 @@
         android:textSize="12dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editpassword" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout5" />
 </androidx.constraintlayout.widget.ConstraintLayout>

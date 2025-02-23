@@ -6,9 +6,7 @@ import android.os.Parcelable
 class UserModel {
     data class UserModel(
         var userId: String = "",
-        var firstName: String = "",
-        var lastName: String = "",
-        var address: String = "",
+        var Username: String = "",
         var contact: String = "",
         var email: String = "",
     ): Parcelable {
@@ -17,16 +15,12 @@ class UserModel {
             parcel.readString() ?: "",
             parcel.readString() ?: "",
             parcel.readString() ?: "",
-            parcel.readString() ?: "",
-            parcel.readString() ?: ""
         ) {
         }
 
         override fun writeToParcel(parcel: Parcel, flags: Int) {
             parcel.writeString(userId)
-            parcel.writeString(firstName)
-            parcel.writeString(lastName)
-            parcel.writeString(address)
+            parcel.writeString(Username)
             parcel.writeString(contact)
             parcel.writeString(email)
         }

@@ -35,7 +35,7 @@ package com.example.slice_of_heaven.viewmodel
         ) {
             repo.forgetPassword(email, callback)
         }
-        fun getCurrentUser():FirebaseUser?.{
+        fun getCurrentUser():FirebaseUser?{
             return repo.getCurretntUser()
         }
 
