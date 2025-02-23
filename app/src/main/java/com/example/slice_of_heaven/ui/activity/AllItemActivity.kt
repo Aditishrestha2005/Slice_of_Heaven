@@ -20,7 +20,7 @@ class AllItemActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(binding.root)
 
-        // Convert immutable lists to mutable lists
+
         val menuFoodName = mutableListOf("Cheese Pizza", "Veggie Pizza", "Meat Lover Pizza", "Margherita Pizza", "BBQ Chicken Pizza", "Hawaiian Pizza", "Tandoori Pizza", "Paneer Pizza", "Bacon Pizza", "Pepperoni Pizza")
         val menuFoodPrice = mutableListOf("Rs 650", "Rs 750", "Rs 1050", "Rs 750", "Rs 950", "Rs 750", "Rs 850", "Rs 850", "Rs950", "Rs950")
         val menuImage = mutableListOf(

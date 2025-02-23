@@ -21,10 +21,25 @@ class AdminActivity : AppCompatActivity() {
             val intent = Intent(this,AdditemActivity::class.java)
             startActivity(intent)
         }
-        binding.viewallitem.setOnClickListener{
-            val intent = Intent(this,AllItemActivity::class.java)
+//        binding.viewallitem.setOnClickListener{
+//            val intent = Intent(this,AllItemActivity::class.java)
+//            startActivity(intent)
+//        }
+
+        binding.Logout.setOnClickListener{
+            val intent=Intent(this,LoginActivity::class.java)
             startActivity(intent)
         }
+        binding.Profile.setOnClickListener{
+            val intent=Intent(this,ProfileActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.viewallitem.setOnClickListener{
+            val intent=Intent(this,AllItemActivity::class.java)
+            startActivity(intent)
+        }
+
 
 
 
