@@ -16,13 +16,14 @@ class PayOutActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        // Initialize View Binding
+        binding = ActivityPayOutBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         binding.backButton.setOnClickListener {
           finish()
         }
 
-        // Initialize View Binding
-        binding = ActivityPayOutBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+
 
         // Initialize Firebase Database Reference
         database = FirebaseDatabase.getInstance().getReference("Orders")

@@ -12,6 +12,7 @@ import com.example.slice_of_heaven.adapter.CartAdapter
 import com.example.slice_of_heaven.databinding.FragmentCartBinding
 import com.example.slice_of_heaven.ui.activity.PayOutActivity
 
+
 class CartFragment : Fragment() {
     private lateinit var binidng:FragmentCartBinding
 
@@ -36,9 +37,8 @@ class CartFragment : Fragment() {
             R.drawable.cheese,
             R.drawable.veggie,
             R.drawable.meatlover,
-            R.drawable.hawaiian,
-            R.drawable.bbqchicken,
-            R.drawable.tandoori,
+            R.drawable.paneer
+
 
         )
 

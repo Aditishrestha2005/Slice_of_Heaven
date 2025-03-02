@@ -43,7 +43,7 @@ class AllItemActivity : AppCompatActivity(){
             finish()
         }
 
-//        val adapter = MenutemAdapter(menuFoodName, menuFoodPrice, menuImage)
+//        val adapter = AdditemActivity(menuFoodName, menuFoodPrice, menuImage)
 
         binding.allmenuRecyclerView.layoutManager = LinearLayoutManager(this)
 //        binding.allmenuRecyclerView.adapter = adapter

@@ -73,7 +73,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:text="Cheese pizza is a classic Italian dish featuring a simple yet delicious combination of ingredients. It typically consists of a thin or thick crust topped with a rich tomato sauce, a generous layer of mozzarella cheese, and often garnished with herbs like basil or oregano. The pizza is baked until the cheese is bubbly and golden, making it a favorite for both kids and adults.     "
+        android:text="This Pizza is a classic Italian dish featuring a simple yet delicious combination of ingredients. It typically consists of a thin or thick crust topped with a rich tomato sauce, a generous layer of mozzarella cheese, and often garnished with herbs like basil or oregano. The pizza is baked until the cheese is bubbly and golden, making it a favorite for both kids and adults.     "
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
