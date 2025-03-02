@@ -98,19 +98,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView8" />
 
-            <TextView
-                android:id="@+id/textView15"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="30"
-                android:textColor="@color/black"
-                android:textSize="14dp"
-                app:layout_constraintEnd_toEndOf="@+id/pendingorderTextView"
-                app:layout_constraintHorizontal_bias="0.458"
-                app:layout_constraintStart_toStartOf="@id/pendingorderTextView"
-                app:layout_constraintTop_toBottomOf="@+id/pendingorderTextView" />
-
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
