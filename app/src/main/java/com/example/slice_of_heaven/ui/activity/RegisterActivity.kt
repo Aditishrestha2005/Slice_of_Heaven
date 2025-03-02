@@ -28,19 +28,14 @@ class RegisterActivity : AppCompatActivity() {
         userViewModel = UserViewModel(repo)
 
         binding.SignupBtn.setOnClickListener {
-
+            var username = binding.registerusername.text.toString()
             var email = binding.registerEmail.text.toString()
             var password = binding.registerPassword.text.toString()
-            var username = binding.registerusername.text.toString()
             var contact = binding.registerContact.text.toString()
 
             userViewModel.signup(email, password) { success, message, userId ->
                 if (success) {
-                    var userModel = UserModel(
-                        userId,
-                        username,
-                        contact, email
-                    )
+                    var userModel = UserModel(userId, username, contact, email)
                     userViewModel.addUserToDatabase(userId, userModel) { success, message ->
                         if (success) {
                             Toast.makeText(

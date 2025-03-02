@@ -7,10 +7,11 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.slice_of_heaven.R
-import com.example.slice_of_heaven.adapter.AdditemAdapter
+import com.example.slice_of_heaven.adapter.MenutemAdapter
 import com.example.slice_of_heaven.databinding.ActivityAllItemBinding
 
-class AllItemActivity : AppCompatActivity() {
+
+class AllItemActivity : AppCompatActivity(){
     private val binding: ActivityAllItemBinding by lazy {
         ActivityAllItemBinding.inflate(layoutInflater)
     }
@@ -19,6 +20,9 @@ class AllItemActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(binding.root)
+
+
+
 
 
         val menuFoodName = mutableListOf("Cheese Pizza", "Veggie Pizza", "Meat Lover Pizza", "Margherita Pizza", "BBQ Chicken Pizza", "Hawaiian Pizza", "Tandoori Pizza", "Paneer Pizza", "Bacon Pizza", "Pepperoni Pizza")
@@ -39,10 +43,10 @@ class AllItemActivity : AppCompatActivity() {
             finish()
         }
 
-        val adapter = AdditemAdapter(menuFoodName, menuFoodPrice, menuImage)
+//        val adapter = MenutemAdapter(menuFoodName, menuFoodPrice, menuImage)
 
         binding.allmenuRecyclerView.layoutManager = LinearLayoutManager(this)
-        binding.allmenuRecyclerView.adapter = adapter
+//        binding.allmenuRecyclerView.adapter = adapter
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())

@@ -3,7 +3,6 @@ package com.example.slice_of_heaven.model
 import android.os.Parcel
 import android.os.Parcelable
 
-class UserModel {
     data class UserModel(
         var userId: String = "",
         var Username: String = "",
@@ -39,4 +38,3 @@ class UserModel {
             }
         }
     }
-}

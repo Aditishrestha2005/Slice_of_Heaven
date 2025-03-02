@@ -29,7 +29,7 @@
         android:layout_marginEnd="1dp"
         android:background="@drawable/textviewshape"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/circularImg">
+        app:layout_constraintTop_toBottomOf="@+id/Enter">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -43,6 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="19dp"
         android:layout_marginEnd="1dp"
+        android:background="@drawable/textviewshape"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Username">
 
@@ -59,6 +60,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
         android:layout_marginEnd="1dp"
+        android:background="@drawable/textviewshape"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Email">
 
@@ -94,17 +96,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/circularImg"
-        android:layout_width="164dp"
-        android:layout_height="156dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="11dp"
-        android:layout_marginEnd="124dp"
-        android:clipToOutline="true"
-        android:scaleType="centerCrop"
-        android:src="@drawable/loading"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Enter" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

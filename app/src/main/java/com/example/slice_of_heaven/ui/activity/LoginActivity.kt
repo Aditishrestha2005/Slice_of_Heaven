@@ -23,36 +23,38 @@ class LoginActivity : AppCompatActivity() {
         binding=ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        var repo = UserRepositoryImpl()
+        val repo = UserRepositoryImpl()
         userViewModel = UserViewModel(repo)
 
 
         binding.btnlogin.setOnClickListener {
-            var email = binding.editusername.text.toString()
-            var password = binding.editpassword.text.toString()
+            val username = binding.editusername.text.toString()
+            val password = binding.editpassword.text.toString()
 
-            userViewModel.login(email, password) { success, message ->
+            userViewModel.login(username, password) { success, message ->
                 if (success) {
-                    var intent = Intent(this@LoginActivity,
-                        NavigationActivity::class.java)
+                    val selectedId = binding.radioGroup.checkedRadioButtonId
+
+                    val intent = when (selectedId) {
+                        R.id.UserRadio -> Intent(this@LoginActivity, NavigationActivity::class.java)
+                        R.id.AdminRadio-> Intent(this@LoginActivity, AdminActivity::class.java)
+                        else -> {
+                            Toast.makeText(this@LoginActivity, "Please select User or Admin", Toast.LENGTH_LONG).show()
+                            return@login
+                        }
+                    }
                     startActivity(intent)
                 } else {
-                    Toast.makeText(this@LoginActivity,
-                        message, Toast.LENGTH_LONG).show()
+                    Toast.makeText(this@LoginActivity, message, Toast.LENGTH_LONG).show()
                 }
             }
         }
 
-
-
         binding.btnSignUp.setOnClickListener {
-
-            val intent = Intent(
-                this@LoginActivity,
-                RegisterActivity::class.java
-            )
+            val intent = Intent(this,RegisterActivity::class.java)
             startActivity(intent)
         }
+
 
 
 

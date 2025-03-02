@@ -1,30 +1,32 @@
 package com.example.slice_of_heaven.adapter
 
+import android.content.Context
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.slice_of_heaven.databinding.ItemItemBinding
+import com.example.slice_of_heaven.model.AllMenu
 
-class AdditemAdapter(
-    private val MenuItemName: MutableList<String>,
-    private val MenuItemPrice: MutableList<String>,
-    private val MenuItemImage: MutableList<Int>
-) : RecyclerView.Adapter<AdditemAdapter.AdditemViewHolder>() {
-    private val itemQuantities = IntArray(MenuItemName.size) { 1 }
+class MenutemAdapter(
+    private val context:Context,
+    private val menuList:MutableList<AllMenu>
+) : RecyclerView.Adapter<MenutemAdapter.AdditemViewHolder>() {
+    private val itemQuantities = IntArray(menuList.size) { 1 }
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): AdditemAdapter.AdditemViewHolder {
+    ): MenutemAdapter.AdditemViewHolder {
         val binding = ItemItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return AdditemViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: AdditemAdapter.AdditemViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: MenutemAdapter.AdditemViewHolder, position: Int) {
         holder.bind(position)
     }
 
-    override fun getItemCount(): Int = MenuItemName.size
+    override fun getItemCount(): Int = menuList.size
 
     inner class AdditemViewHolder(private val binding: ItemItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
@@ -32,9 +34,12 @@ class AdditemAdapter(
         fun bind(position: Int) {
             binding.apply {
                 val quantity = itemQuantities[position]
-                FoodName.text = MenuItemName[position]
-                FoodPrice.text = MenuItemPrice[position]
-                FoodimageView.setImageResource(MenuItemImage[position])
+                val menuItem=menuList[position]
+                val uriString=menuItem.foodImage
+                val uri= Uri.parse(uriString)
+                FoodName.text =menuItem.foodName
+                FoodPrice.text =menuItem.foodPrice
+//                FoodimageView.setImageResource(menuList[position])
 
                 amount.text = quantity.toString()
 
@@ -66,11 +71,11 @@ class AdditemAdapter(
         }
 
         private fun deleteQuantity(position: Int) {
-            MenuItemName.removeAt(position)
-            MenuItemImage.removeAt(position)
-            MenuItemPrice.removeAt(position)
+            menuList.removeAt(position)
+            menuList.removeAt(position)
+            menuList.removeAt(position)
             notifyItemRemoved(position)
-            notifyItemRangeChanged(position, MenuItemName.size)
+            notifyItemRangeChanged(position, menuList.size)
         }
     }
 }

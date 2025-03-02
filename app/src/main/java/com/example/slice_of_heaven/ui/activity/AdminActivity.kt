@@ -17,10 +17,7 @@ class AdminActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(binding.root)
-        binding.addmenu.setOnClickListener{
-            val intent = Intent(this,AdditemActivity::class.java)
-            startActivity(intent)
-        }
+
 //        binding.viewallitem.setOnClickListener{
 //            val intent = Intent(this,AllItemActivity::class.java)
 //            startActivity(intent)
@@ -37,6 +34,12 @@ class AdminActivity : AppCompatActivity() {
 
         binding.viewallitem.setOnClickListener{
             val intent=Intent(this,AllItemActivity::class.java)
+            startActivity(intent)
+        }
+        binding.pendingorderTextView.setOnClickListener{
+            val intent=Intent(
+                this,PendingorderActivity::class.java
+            )
             startActivity(intent)
         }
 

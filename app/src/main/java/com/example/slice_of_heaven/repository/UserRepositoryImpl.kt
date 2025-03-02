@@ -1,7 +1,7 @@
 package com.example.slice_of_heaven.repository
 
 
-    import android.widget.Toast
+
     import com.example.slice_of_heaven.model.UserModel
     import com.google.firebase.auth.FirebaseAuth
     import com.google.firebase.auth.FirebaseUser
@@ -9,15 +9,15 @@ package com.example.slice_of_heaven.repository
     import com.google.firebase.database.FirebaseDatabase
 
     class UserRepositoryImpl : UserRepository {
-        lateinit var auth: FirebaseAuth
+         var auth: FirebaseAuth = FirebaseAuth.getInstance()
 
         var database: FirebaseDatabase = FirebaseDatabase.getInstance()
 
         var ref: DatabaseReference = database.reference
             .child("users")
 
-        override fun login(email: String, password: String, callback: (Boolean, String) -> Unit) {
-            auth.signInWithEmailAndPassword(email, password)
+        override fun login(username: String, password: String, callback: (Boolean, String) -> Unit) {
+            auth.signInWithEmailAndPassword(username, password)
                 .addOnCompleteListener {
                     if (it.isSuccessful) {
                         callback(true, "Login success")
