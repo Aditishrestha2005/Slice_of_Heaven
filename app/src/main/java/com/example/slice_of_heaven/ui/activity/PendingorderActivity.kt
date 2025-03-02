@@ -27,15 +27,12 @@ class PendingorderActivity : AppCompatActivity() {
             finish()
         }
             val orderedcustomerName = arrayListOf(
-                "John Doe",
-                "Jane Smith",
-                "Mike Johnson"
+               "Sabyata",
+                "Aditi"
             )
 
             val orderedQuantity = arrayListOf(
-                "9",
-                "7",
-                "6"
+               "2","3"
             )
 
             val orderedFoodImage = arrayListOf(R.drawable.cheese,R.drawable.veggie,R.drawable.paneer)
