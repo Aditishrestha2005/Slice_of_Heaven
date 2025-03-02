@@ -109,7 +109,6 @@
         android:id="@+id/btnSignUp"
         android:layout_width="68dp"
         android:layout_height="31dp"
-        android:layout_marginTop="152dp"
         android:layout_marginEnd="88dp"
         android:clickable="true"
         android:focusable="true"
@@ -119,20 +118,7 @@
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/forgetpass" />
-
-    <TextView
-        android:id="@+id/forgetpass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:text="Forget Password?"
-        android:textColor="@color/marron"
-        android:textSize="12dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout5" />
+        tools:layout_editor_absoluteY="757dp" />
 
 
     <RadioGroup
