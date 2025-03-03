@@ -1,5 +1,6 @@
 package com.example.slice_of_heaven.ui.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.slice_of_heaven.databinding.FragmentClientProfileBinding
+import com.example.slice_of_heaven.ui.activity.LoginActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -37,7 +39,7 @@ class ProfileFragment : Fragment() {
 
         // Logout Button Click Listener
         binding.logOut.setOnClickListener {
-            logout()
+           logout()
         }
 
         return binding.root
@@ -120,6 +122,10 @@ class ProfileFragment : Fragment() {
     private fun logout() {
         val userId = firebaseAuth.currentUser?.uid
 
+//        val intent = Intent(requireContext(),LoginActivity::class.java)
+//        startActivity(intent)
+//        requireActivity().finish()
+
         // Check if the user is logged in
         if (userId != null) {
             // Delete user data from Firebase Realtime Database
@@ -127,8 +133,12 @@ class ProfileFragment : Fragment() {
                 if (task.isSuccessful) {
                     // Now sign out the user
                     firebaseAuth.signOut()
+
                     Toast.makeText(context, "Logged out and user data deleted", Toast.LENGTH_SHORT).show()
 
+                    val intent = Intent(requireContext(),LoginActivity::class.java)
+                    startActivity(intent)
+                    requireActivity().finish()
                     // You can navigate to another activity here if needed, like a login screen
                     // For example, you can use an Intent to navigate to the LoginActivity.
                     // Intent(context, LoginActivity::class.java).also { startActivity(it) }
@@ -136,6 +146,11 @@ class ProfileFragment : Fragment() {
                     Toast.makeText(context, "Failed to delete user data", Toast.LENGTH_SHORT).show()
                 }
             }
+        }else{
+            val intent = Intent(requireContext(),LoginActivity::class.java)
+            startActivity(intent)
+            requireActivity().finish()
         }
+
     }
 }

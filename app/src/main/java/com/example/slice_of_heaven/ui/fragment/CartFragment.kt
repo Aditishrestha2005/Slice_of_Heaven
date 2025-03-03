@@ -37,8 +37,17 @@ class CartFragment : Fragment() {
             R.drawable.cheese,
             R.drawable.veggie,
             R.drawable.meatlover,
+            R.drawable.meatlover,
+            R.drawable.meatlover,
+            R.drawable.meatlover,
+            R.drawable.meatlover,
+            R.drawable.meatlover,
+            R.drawable.meatlover,
+            R.drawable.meatlover,
+            R.drawable.meatlover,
+            R.drawable.meatlover,
+            R.drawable.meatlover,
             R.drawable.paneer
-
 
         )
 
